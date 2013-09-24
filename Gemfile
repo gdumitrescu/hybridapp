@@ -1,4 +1,5 @@
-source 'http://rubygems.org'
+# Gemfile
+source "https://rubygems.org"
 
 # Bundle the gems we use
 gem 'bundler'
