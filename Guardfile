@@ -1,4 +1,4 @@
-# More info at 
+# More info at
 # https://github.com/guard/guard#readme
 # https://github.com/guard/guard/wiki/Guardfile-examples
 
@@ -11,26 +11,26 @@
 
 group :app do
 
-  guard :bundler, 
+  guard :bundler,
     :hide_success => true do
     watch('Gemfile')
   end
-  
-  guard 'coffeescript', 
-    :output => 'assets/www/javascripts/', 
-    :bare => %w{ a.coffee }, 
+
+  guard 'coffeescript',
+    :output => 'assets/www/scripts/',
+    :bare => %w{ a.coffee },
     :hide_success => true do
     watch('src/coffee/(.*)\.coffee')
   end
-  
-  guard 'coffeescript', 
-    :output => 'spec/javascripts/',
+
+  guard 'coffeescript',
+    :output => 'spec/scripts/',
     :hide_success => true do
     watch('spec/coffeescripts/(.*)\.coffee')
   end
- 
+
   guard 'compass',
-    :output => 'assets/www/stylesheets',
+    :output => 'assets/www/styles',
     :workdir => 'src/sass',
     :configuration_file => 'config/compass.rb',
     :hide_success => true do
@@ -44,18 +44,18 @@ group :app do
     watch('src/haml(.*)\.haml')
   end
 
-  guard 'webrick', 
-    :host => '127.0.0.1', 
-    :port => '3000', 
-    :docroot => 'assets/www' do
-  end
+  #guard 'webrick',
+  #  :host => '127.0.0.1',
+  #  :port => '3000',
+  #  :docroot => 'assets/www' do
+  #end
 
   guard 'livereload',
-    :apply_js_live => true, 
+    :apply_js_live => true,
     :apply_css_live => true,
     :apply_htm_live => true do
-    watch('assets/www/javascripts/.+\.js$')
-    watch('assets/www/stylesheets/.+\.css$')
+    watch('assets/www/scripts/.+\.js$')
+    watch('assets/www/styles/.+\.css$')
     watch('assets/www/.+\.htm$')
   end
 

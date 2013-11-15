@@ -1,7 +1,8 @@
-require 'compass'
-require 'haml'
-require 'sass'
-require 'sassy-buttons'
+require "compass"
+require "compass-placeholders"
+require "haml"
+require "sass"
+require "sassy-buttons"
 # Require any additional compass plugins here.
 
 # Get the directory that this configuration file exists in
@@ -15,13 +16,13 @@ sass_dir = "sass"
 sass_path = File.join(dir_src, "src/", "sass")
 
 css_dir = "stylesheets"
-css_path  = File.join(dir_src, "assets/www/", "stylesheets")
+css_path  = File.join(dir_src, "assets/www/", "styles")
 
 images_dir = "images"
 images_path  = File.join(dir_src, "assets/www", "images")
 
 javascripts_dir = "javascripts"
-javascripts_path  = File.join(dir_src, "assets/www", "javascripts")
+javascripts_path  = File.join(dir_src, "assets/www", "scripts")
 
 #Environment
 #environment = :development
